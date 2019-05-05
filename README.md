@@ -37,6 +37,7 @@ Find elements in list |
 After work, your new list will save in new file 'data_save.txt'
 -----------------------------------------------------------------------
 What to do if:
+
 	I enter the menu item number, but nothing changes:
 		Perhaps bring the number not corresponding to the number
 		from the menu. Try again.
