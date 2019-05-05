@@ -1,0 +1,12 @@
+Alex Clark;Mecanic;1994/12/04;2017;6009;4.6;4.2
+Ben Folden;Programmer;1999/06/25;2018;7906;5.0;5.0
+Mark Uri;Writer;2009/03/19;2023;10840;4.6;3.8
+Mark Lemming;Programmer;2000/09/01;2019;8307;5.0;4.3
+Ilon Mask;Bisnessmen;1987/11/03;2000;3000;5.0;5.0
+Loidn Mask;Bisnessmen;1987/11/03;2000;3000;5.0;5.0
+Eva Loed;Ecoligist;2005/04/29;2030;9099;4.6;3.3
+Ava Loed;Ecoligist;2005/04/30;2030;9099;4.6;3.3
+Noi tuy;Poet;1990/09/09;2009;3909;3.3;2.3
+Mark Lemming;Programmer;2000/09/01;2019;8307;5.0;4.9
+Ben Oliver;Artist;1999/02/15;2019;8080;2.0;5.0
+Ilon Mask;Bisnessmen;1987/11/03;2000;3000;2.2;3.3
