@@ -122,7 +122,7 @@ void Save(LH* Head)
     LN* q=NULL;
     q=Head->first;
 
-    if((df=fopen("data_save.txt","w"))!=NULL)
+    if((df=fopen("data.txt","w"))!=NULL)
     {
         while(q!=NULL)
         {
@@ -156,7 +156,7 @@ void Save(LH* Head)
 
     if((fclose(df)!=EOF))
     {
-        puts("Your changes (or creation new card index) saved in 'data_save.txt' file");
+        puts("Your changes (or creation new card index) saved in 'data.txt' file");
     }
 
 }
