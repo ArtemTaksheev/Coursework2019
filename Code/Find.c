@@ -42,7 +42,7 @@ void Find(LH* Head)
                    "5 - Average score\n"
                    "6 - Attendance\n"
                    "7 - Date of birth\n"
-                   "8 - Back\n");
+                   "8 - Back to title\n");
             sign=IntCheck();
         }while((sign<0)||(sign>7));
 
