@@ -103,7 +103,7 @@ void print_head()
 /*Вывод структуры*/
 void print_struct(ST* MASS)
 {
-    printf("%20s|%10s|%6d.%2d.%2d|%11d|%11d|%13.2f|%10.2f|\n",
+    printf("%20s|%10s|%6d/%2d/%2d|%11d|%11d|%13.2f|%10.2f|\n",
            MASS->Name,MASS->Spec,MASS->DATE[0],MASS->DATE[1],MASS->DATE[2],
            MASS->year_begin,MASS->group,MASS->average,MASS->attendance);
 
