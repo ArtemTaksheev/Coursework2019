@@ -163,7 +163,10 @@ char* AttendanceCheck(char* value)/*Проверка посещаемости*/
     int size;
     int check;
     int countsep;
+    int countnum;
+    int firstnum;
     char*s;
+    char num;
     check=0;
     while(check!=1)
     {
@@ -174,10 +177,24 @@ char* AttendanceCheck(char* value)/*Проверка посещаемости*/
         s=value;
         check=1;
         countsep=0;
+        countnum=0;
+        firstnum=0;
         while((*s!='\0'))
         {
             if((isdigit(*s)==0)&&(*s!='.'))check=0;
-            if(*s=='.')countsep++;
+            if(*s=='.')
+            {
+                countsep++;
+                countnum=0;
+            }
+            else
+            {
+                countnum++;
+                num=*s;
+                if((countsep==0)&&((countnum>1)||(num>49)))check=0;
+                else if(countsep==0) firstnum=(int)num-48;
+                if(firstnum &&(num>48))check=0;
+            }
             s++;
         }
         if (countsep!=1)check=0;
