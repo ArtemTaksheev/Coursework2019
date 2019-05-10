@@ -135,6 +135,7 @@ char* AvgCheck(char* value)/*Проверка среднего балла*/
 {
     int size;
     int check;
+    int countsep;
     char*s;
     check=0;
     while(check!=1)
@@ -145,11 +146,14 @@ char* AvgCheck(char* value)/*Проверка среднего балла*/
         value[size-1]='\0';
         s=value;
         check=1;
+        countsep=0;
         while((*s!='\0'))
         {
             if((isdigit(*s)==0)&&(*s!='.'))check=0;
+            if(*s=='.')countsep++;
             s++;
         }
+        if(countsep!=1)check=0;
         if(check==0)puts("Incorrect input (You can't write any symbol (except '.') in Average score). Try again");
     }
     return value;
@@ -158,6 +162,7 @@ char* AttendanceCheck(char* value)/*Проверка посещаемости*/
 {
     int size;
     int check;
+    int countsep;
     char*s;
     check=0;
     while(check!=1)
@@ -168,11 +173,14 @@ char* AttendanceCheck(char* value)/*Проверка посещаемости*/
         value[size-1]='\0';
         s=value;
         check=1;
+        countsep=0;
         while((*s!='\0'))
         {
             if((isdigit(*s)==0)&&(*s!='.'))check=0;
+            if(*s=='.')countsep++;
             s++;
         }
+        if (countsep!=1)check=0;
         if(check==0)puts("Incorrect input (You can't write any symbol (except '.') in Attendance). Try again");
     }
     return value;
@@ -183,6 +191,8 @@ char* DateCheck(char* value)/*Проверка даты*/
 
     int size;
     int check;
+    int countsep;
+    int countnum;
     char*s;
     check=0;
     while(check!=1)
@@ -192,12 +202,29 @@ char* DateCheck(char* value)/*Проверка даты*/
         size=strlen(value);
         value[size-1]='\0';
         s=value;
+        countsep=0;
+        countnum=0;
         check=1;
         while((*s!='\0'))
         {
             if((isdigit(*s)==0)&&(*s!='/'))check=0;
+
+            if(*s=='/')
+            {
+                countsep++;
+                if(countsep==1)
+                {
+                    if(countnum!=4)check=0;
+
+                }
+                else if(countnum!=2)check=0;
+                countnum=0;
+            }
+            else countnum++;
+
             s++;
         }
+        if(countsep!=2)check=0;
         if(check==0)puts("Incorrect input (You can't write any symbol (except '/') in Data). Try again");
     }
     return value;
