@@ -31,7 +31,7 @@ Find elements in list |
 	need.
 -----------------------------------------------------------------------
 
-After work, your new list will save in new file 'data_save.txt'
+After work, your new list will save in new file 'data.txt'
 -----------------------------------------------------------------------
 What to do if:
 	I enter the menu item number, but nothing changes:
@@ -40,7 +40,7 @@ What to do if:
 	The program writes that the file does not exist or it is empty:
 		Do not worry. You can continue work. You can add new
 		elements in your list. After work, your new list will
-		save in new file 'data_save.txt'.
+		save in new file 'data.txt'.
 	I saw "Fatal error, Can't work" on my screen
 		As written, this error is fatal. The program will not
 		work. Try restarting the program.
