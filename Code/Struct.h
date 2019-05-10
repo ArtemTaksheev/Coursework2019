@@ -7,8 +7,8 @@ typedef struct
     int DATE[3];//Дата рождения(yyyy/mm/dd)
     int year_begin;//Год начала учебы
     int group;//Номер группы
-    float average;//Максимальное среднее значение
-    float attendance;//Минимальное среднее значение
+    float average;//Средний бал
+    float attendance;//Посещаемость (в процентах от 0.0 до 1.0)
 
 }ST;
 enum sizes{MAXLINE=80};
