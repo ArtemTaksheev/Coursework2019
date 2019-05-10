@@ -23,7 +23,7 @@ void Change(LH* Head)
         puts("0 - Add elements");
         puts("1 - Correct elements");
         puts("2 - Delete elements");
-        puts("3 - Back");
+        puts("3 - Back to title");
         key=IntCheck();
         if(!CheckList(Head)&&(key!=0)&&(key!=3)) {                  //Если список пустой, а пользователь хочет удалять
             puts("You can't edit your list without any elements");// или изменять елементы списка
@@ -206,7 +206,7 @@ void CHANGE(LH*Head)/*Изменение элементов*/
                                "5 - Average score\n"
                                "6 - Attendance\n"
                                "7 - Date of birth\n"
-                               "8 - Back\n");
+                               "8 - Back to title\n");
                         sign=IntCheck();
                     }while((sign<1)||(sign>8));
 
