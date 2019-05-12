@@ -10,18 +10,21 @@ void Sort(LH* Head)
 {
     int sign;
 
-    float (*kind[6])(LN*,LN*);
-    kind[0]=NameValue;
-    kind[1]=SpecValue;
-    kind[2]=YearBegValue;
-    kind[3]=GroupValue;
-    kind[4]=AvgValue;
-    kind[5]=AttendanceValue;
+    float (*kind[8])(LN*,LN*);
+    kind[0]=IdValue;
+    kind[1]=NameValue;
+    kind[2]=SpecValue;
+    kind[3]=YearBegValue;
+    kind[4]=GroupValue;
+    kind[5]=AvgValue;
+    kind[6]=AttendanceValue;
+    kind[7]=DataLook;
     do
     {
         CLS;
         /*Выбор поля для сортировки*/
         printf("Kind of sort:\n"
+               "0 - Id\n"
                "1 - Name\n"
                "2 - Speciality\n"
                "3 - Year of begin\n"
@@ -31,17 +34,10 @@ void Sort(LH* Head)
                "7 - Date of birth\n"
                "8 - Back to title\n");
         sign=IntCheck();
-    }while((sign<1)||(sign>8));
+    }while((sign<0)||(sign>8));
     if(sign!=8)
     {
-        if(sign==7)
-        {
-            sortDate(Head);//Сортировка по дате
-        }
-        else
-        {
-            SortKind(Head,kind[sign-1]);//Другие сортировки
-        }
+        SortKind(Head,kind[sign]);
         puts("Sorting list:");
         Show(Head);
     }
@@ -54,7 +50,7 @@ void Sort(LH* Head)
 }
 
 
-int DataLook (LN *Node1, LN *Node2)/*Проверка дат на сортировку*/
+float DataLook (LN *Node1, LN *Node2)/*Проверка дат на сортировку*/
 {
     if(Node1->data->DATE[0]>=Node2->data->DATE[0])
     {
@@ -103,26 +99,13 @@ void SortKind(LH*Head,float(*funcName)(LN*,LN*))
         }
     }
 }
-void sortDate (LH*Head)
+
+float IdValue(LN* Node1,LN*Node2)
 {
-    int i,j,n;
-    LN*q=NULL,*q1=NULL;
-    q=Head->first;
-    n=CountOfElem(Head);
-    for(i=0;i<n;i++,q=q->next)
-    {
-        q1=Head->first;
-        for(j=0;j<n-i-1;j++,q1=q1->next)
-        {
-            if(DataLook(q1,q1->next))
-            {
-                SwapNodes(q1,q1->next);//Перестановка значений элементов
-            }
-        }
-    }
-
+    int i=0;
+    if(Node1->id>Node2->id) i=1;
+    return i;
 }
-
 float NameValue(LN* Node1,LN*Node2)
 {
     int i;
