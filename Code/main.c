@@ -48,13 +48,15 @@ int main()
                 do
                 {
                     CLS;
+                    puts("Greetings!\n"
+                         "This program for working with the electronic file \"Students\".");
                     puts("What to do:");
-                    puts("0-Info");
-                    puts("1-Show list");
-                    puts("2-Correct list");
-                    puts("3-Sort list");
-                    puts("4-Find elements in list");
-                    puts("5-End");
+                    puts("0 - Info");
+                    puts("1 - Show list");
+                    puts("2 - Correct list");
+                    puts("3 - Sort list");
+                    puts("4 - Find elements in list");
+                    puts("5 - End");
                     key=IntCheck();
                 }while((key<0)||(key>5));
 
