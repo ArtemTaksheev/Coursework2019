@@ -24,24 +24,33 @@ void Sort(LH* Head)
         printf("Kind of sort:\n"
                "1 - Name\n"
                "2 - Speciality\n"
-               "3-Year of begin\n"
-               "4-Group\n"
-               "5-Max average\n"
-               "6-Min average\n"
-               "7-Date of birth\n"
-               "8-Back\n");
+               "3 - Year of begin\n"
+               "4 - Group\n"
+               "5 - Average score\n"
+               "6 - Attendance\n"
+               "7 - Date of birth\n"
+               "8 - Back to title\n");
         sign=IntCheck();
-    }while((sign<1)||(sign>7));
-    if(sign==7)
+    }while((sign<1)||(sign>8));
+    if(sign!=8)
     {
-        sortDate(Head);//Сортировка по дате
+        if(sign==7)
+        {
+            sortDate(Head);//Сортировка по дате
+        }
+        else
+        {
+            SortKind(Head,kind[sign-1]);//Другие сортировки
+        }
+        puts("Sorting list:");
+        Show(Head);
     }
     else
     {
-        SortKind(Head,kind[sign-1]);//Другие сортировки
+        puts("Press Enter to continue");
+        getchar();
     }
-    puts("Sorting list:");
-    Show(Head);
+
 }
 
 
