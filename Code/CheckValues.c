@@ -170,7 +170,7 @@ char* AttendanceCheck(char* value)/*Проверка посещаемости*/
     check=0;
     while(check!=1)
     {
-        printf("Your value of Attendance: ");
+        printf("Your value of Attendance (from 0.0 to 1.0): ");
         fgets(value,MAXLINE,stdin);
         size=strlen(value);
         value[size-1]='\0';
@@ -193,7 +193,7 @@ char* AttendanceCheck(char* value)/*Проверка посещаемости*/
                 num=*s;
                 if((countsep==0)&&((countnum>1)||(num>49)))check=0;
                 else if(countsep==0) firstnum=(int)num-48;
-                if(firstnum &&(num>48))check=0;
+                if(firstnum &&(countsep!=0) &&(num>48))check=0;
             }
             s++;
         }
