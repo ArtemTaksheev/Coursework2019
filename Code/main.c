@@ -15,7 +15,7 @@
 #include "Find.h"
 #include "Files.h"
 #include "CheckValues.h"
-void Working(LH* Head,float(*funcName)(LH*));
+void Working(LH* Head,void(*funcName)(LH*));
 int main()
 {
 
@@ -24,7 +24,7 @@ int main()
     LH* head=NULL;
 
     /*Создание массива указателей на функции*/
-    float (*kindwork[5])(LH*);
+    void (*kindwork[5])(LH*);
     kindwork[0]=Info;
     kindwork[1]=Show;
     kindwork[2]=Change;
@@ -83,7 +83,7 @@ int main()
     return 0;
 }
 /*Функция для работы со структурой*/
-void Working(LH* Head,float(*funcName)(LH*))
+void Working(LH* Head,void(*funcName)(LH*))
 {
     funcName(Head);//Вызов функции, которую выбрал пользователь
 }
