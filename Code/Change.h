@@ -23,7 +23,7 @@ float AvgChange(LN* Node,char* value);
 float AttendanceChange(LN* Node,char* value);
 float DataChange(LN* Node,char* value);
 void DoChange(LN* Node,char* value,float(*funcName)(LN*,char*));
-void Working_Change(LH* Head,float(*funcName)(LH*));
+void Working_Change(LH* Head,void(*funcName)(LH*));
 
 
 #endif //COURSEWORK_CHANGE_H
