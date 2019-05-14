@@ -2,20 +2,18 @@
 #define COURSEWORK_WORK_WITH_NODES_H
 
 #include "Struct.h"
-struct LNode//Односвязный список
+typedef struct LN//Односвязный список
 {
     int id;
     ST* data;
-    struct  LNode *next;
-};
-typedef struct LNode LN;
-struct LHead//Голова односвязного списка
+    struct  LN *next;
+}LN;
+typedef struct LH//Голова односвязного списка
 {
     int cnt;
     struct LN *first;
     struct LN*last;
-};
-typedef struct LHead LH;
+}LH;
 
 void Show(LH* Head);/*Выыод всего массива структур*/
 /*Для работы со списком*/
