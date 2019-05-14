@@ -6,7 +6,7 @@
 
 void Change(LH* Head)
 {
-    float (*kind[3])(LH*);
+    void (*kind[3])(LH*);
     kind[0]=ADD;
     kind[1]=CHANGE;
     kind[2]=DELETE;
@@ -282,7 +282,7 @@ void DoChange(LN* Node,char* value,float(*funcName)(LN*,char*))
 {
     funcName(Node,value);
 }
-void Working_Change(LH* Head,float(*funcName)(LH*))
+void Working_Change(LH* Head,void(*funcName)(LH*))
 {
     funcName(Head);//Вызов функции, которую выбрал пользователь
 }
