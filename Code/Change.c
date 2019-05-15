@@ -28,6 +28,8 @@ void Change(LH* Head)
         if(!CheckList(Head)&&(key!=0)&&(key!=3)) {                  //Если список пустой, а пользователь хочет удалять
             puts("You can't edit your list without any elements");// или изменять елементы списка
             key = -1;
+            puts("Press Enter to continue");
+            getchar();
         }
     }while((key<0)||(key>3));
 
